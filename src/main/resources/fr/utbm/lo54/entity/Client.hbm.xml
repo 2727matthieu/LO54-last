@@ -8,8 +8,8 @@
             <column name="ID" />
             <generator class="identity" />
         </id>
-        <many-to-one name="courseSession" class="fr.utbm.lo54.entity.CourseSession" fetch="select">
-            <column name="COURSE_SESSION_ID" not-null="true" />
+        <many-to-one name="courseSession" class="fr.utbm.lo54.entity.CourseSession" cascade="all">
+            <column name="COURSE_SESSION_ID" />
         </many-to-one>
         <property name="lastname" type="string">
             <column name="LASTNAME" length="30" not-null="true" />

@@ -3,7 +3,6 @@ package fr.utbm.lo54.entity;
 
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -18,8 +17,6 @@ public class CourseSession  implements java.io.Serializable {
      private Date startDate;
      private Date endDate;
      private int max;
-     private Set clients = new HashSet(0);
-     private Set clients_1 = new HashSet(0);
 
     public CourseSession() {
     }
@@ -32,16 +29,7 @@ public class CourseSession  implements java.io.Serializable {
         this.endDate = endDate;
         this.max = max;
     }
-    public CourseSession(Course course, Location location, Date startDate, Date endDate, int max, Set clients, Set clients_1) {
-       this.course = course;
-       this.location = location;
-       this.startDate = startDate;
-       this.endDate = endDate;
-       this.max = max;
-       this.clients = clients;
-       this.clients_1 = clients_1;
-    }
-   
+
     public Integer getId() {
         return this.id;
     }
@@ -84,22 +72,6 @@ public class CourseSession  implements java.io.Serializable {
     public void setMax(int max) {
         this.max = max;
     }
-    public Set getClients() {
-        return this.clients;
-    }
-    
-    public void setClients(Set clients) {
-        this.clients = clients;
-    }
-    public Set getClients_1() {
-        return this.clients_1;
-    }
-    
-    public void setClients_1(Set clients_1) {
-        this.clients_1 = clients_1;
-    }
-
-
 
 
 }

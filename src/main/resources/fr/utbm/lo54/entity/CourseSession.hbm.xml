@@ -8,10 +8,10 @@
             <column name="ID" />
             <generator class="identity" />
         </id>
-        <many-to-one name="course" class="fr.utbm.lo54.entity.Course" fetch="select">
+        <many-to-one name="course" class="fr.utbm.lo54.entity.Course"  cascade="all">
             <column name="COURSE_CODE" length="4" not-null="true" />
         </many-to-one>
-        <many-to-one name="location" class="fr.utbm.lo54.entity.Location" fetch="select">
+        <many-to-one name="location" class="fr.utbm.lo54.entity.Location"  cascade="all">
             <column name="LOCATION_ID" not-null="true" />
         </many-to-one>
         <property name="startDate" type="date">
@@ -23,17 +23,5 @@
         <property name="max" type="int">
             <column name="MAX" not-null="true" />
         </property>
-        <set name="clients" table="CLIENT" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="COURSE_SESSION_ID" not-null="true" />
-            </key>
-            <one-to-many class="fr.utbm.lo54.entity.Client" />
-        </set>
-        <set name="clients_1" table="CLIENT" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="COURSE_SESSION_ID" not-null="true" />
-            </key>
-            <one-to-many class="fr.utbm.lo54.entity.Client" />
-        </set>
     </class>
 </hibernate-mapping>

@@ -2,7 +2,6 @@ package fr.utbm.lo54.entity;
 // Generated 12 avr. 2018 21:08:10 by Hibernate Tools 4.3.1
 
 
-import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -13,20 +12,12 @@ public class Location  implements java.io.Serializable {
 
      private Integer id;
      private String city;
-     private Set courseSessions = new HashSet(0);
-     private Set courseSessions_1 = new HashSet(0);
 
     public Location() {
     }
 
-	
     public Location(String city) {
-        this.city = city;
-    }
-    public Location(String city, Set courseSessions, Set courseSessions_1) {
        this.city = city;
-       this.courseSessions = courseSessions;
-       this.courseSessions_1 = courseSessions_1;
     }
    
     public Integer getId() {
@@ -43,22 +34,6 @@ public class Location  implements java.io.Serializable {
     public void setCity(String city) {
         this.city = city;
     }
-    public Set getCourseSessions() {
-        return this.courseSessions;
-    }
-    
-    public void setCourseSessions(Set courseSessions) {
-        this.courseSessions = courseSessions;
-    }
-    public Set getCourseSessions_1() {
-        return this.courseSessions_1;
-    }
-    
-    public void setCourseSessions_1(Set courseSessions_1) {
-        this.courseSessions_1 = courseSessions_1;
-    }
-
-
 
 
 }

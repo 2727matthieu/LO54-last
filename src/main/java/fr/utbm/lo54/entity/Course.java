@@ -13,8 +13,7 @@ public class Course  implements java.io.Serializable {
 
      private String code;
      private String title;
-     private Set courseSessions = new HashSet(0);
-     private Set courseSessions_1 = new HashSet(0);
+
 
     public Course() {
     }
@@ -23,12 +22,6 @@ public class Course  implements java.io.Serializable {
     public Course(String code, String title) {
         this.code = code;
         this.title = title;
-    }
-    public Course(String code, String title, Set courseSessions, Set courseSessions_1) {
-       this.code = code;
-       this.title = title;
-       this.courseSessions = courseSessions;
-       this.courseSessions_1 = courseSessions_1;
     }
    
     public String getCode() {
@@ -45,21 +38,6 @@ public class Course  implements java.io.Serializable {
     public void setTitle(String title) {
         this.title = title;
     }
-    public Set getCourseSessions() {
-        return this.courseSessions;
-    }
-    
-    public void setCourseSessions(Set courseSessions) {
-        this.courseSessions = courseSessions;
-    }
-    public Set getCourseSessions_1() {
-        return this.courseSessions_1;
-    }
-    
-    public void setCourseSessions_1(Set courseSessions_1) {
-        this.courseSessions_1 = courseSessions_1;
-    }
-
 
 
 
