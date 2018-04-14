@@ -1,4 +1,4 @@
-package fr.utbm.lo54;
+package fr.utbm.lo54.core;
 
 import fr.utbm.lo54.entity.Location;
 import fr.utbm.lo54.tools.HibernateUtil;
