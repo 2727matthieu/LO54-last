@@ -23,5 +23,7 @@ public class App {
 		session.getTransaction().commit();
 		session.close();
                 System.exit(0);
+
+
 	}
 }
